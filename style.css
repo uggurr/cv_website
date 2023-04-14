@@ -1,0 +1,145 @@
+/*GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #f8ede3;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.about-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.container{
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Section*/
+#hero{
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+#hero .title{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#hero .img{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#hero .img .photo{
+    border:6px solid #a2b29f; 
+    -webkit-border-radius:15px; 
+    -moz-border-radius:15px; 
+    border-radius:200px;
+}
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+}
+#hero .mouse-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#hero .cv{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #bdd2b6;
+    background-color: transparent;
+    border: 2px solid #bdd2b6;
+    border-radius: 6px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color color;
+}
+#hero .cv:hover{
+    color:  white;
+    background-color: #bdd2b6;
+}
+/* End Hero Section*/
+
+/* Experience Section*/
+#experience{}
+#experience .experience{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#experience .experience-title{
+    font-size: 4rem;
+    margin-top: 50px;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#experience .experience-top p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+#experience .experience-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#experience .experience-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border:2px solid #a2b29f;
+    border-radius: 10px;
+    background-size: cover;
+    margin: 10px 5%;
+}
+#experience .experience-item p{
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+/* End Experience Section*/
+
+/* Scholl Section*/
+
+/* End Scholl Section*/
+
+
