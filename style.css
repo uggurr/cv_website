@@ -24,13 +24,18 @@ a{
     text-align: center;
 }
 .container{
-    min-height: 70vh;
+    min-height: 85vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+.s-container{
+    min-height: 85vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 /* Hero Section*/
 #hero{
     background-size: cover;
@@ -139,7 +144,18 @@ a{
 /* End Experience Section*/
 
 /* Scholl Section*/
-
+#school .school-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border:2px solid #a2b29f;
+    border-radius: 10px;
+    background-size: cover;
+    margin: 10px 5%;
+}
 /* End Scholl Section*/
 
 
