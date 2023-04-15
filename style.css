@@ -31,7 +31,7 @@ a{
     justify-content: center;
 }
 .s-container{
-    min-height: 85vh;
+    min-height: 75vh;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,6 @@ a{
 /* End Hero Section*/
 
 /* Experience Section*/
-#experience{}
 #experience .experience{
     flex-direction: column;
     text-align: center;
@@ -133,6 +132,7 @@ a{
     padding: 30px;
     border:2px solid #a2b29f;
     border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     background-size: cover;
     margin: 10px 5%;
 }
@@ -153,9 +153,115 @@ a{
     padding: 30px;
     border:2px solid #a2b29f;
     border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     background-size: cover;
     margin: 10px 5%;
 }
 /* End Scholl Section*/
+
+/* Skills Section */
+.skills-area h1{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 4rem;
+    margin-bottom: 40px;
+}
+
+.skills-area{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20%;
+}
+.skill{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.skill-title{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.skill-bar{
+    width: 100%;
+    background: rgba(255,255,255,0.6);
+    height: 40px;
+    border-radius: 100px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.skill-fill{
+    background: blue;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    overflow: hidden;
+}
+
+.skill-percent{
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.html{
+    animation: html 2s;
+    width: 50%;
+}
+
+.css{
+    animation: css 2s;
+    width: 70%;
+}
+
+.java{
+    animation: java 2s;
+    width: 80%;
+}
+
+@keyframes html {
+    from{
+        width: 0;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes css {
+    from{
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes java {
+    from{
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .skills-area{
+        padding: 0 5%;
+    }
+    #hero .img{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    }
+}
+/* End Skills Section */
+
 
 
