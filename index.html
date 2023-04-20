@@ -4,20 +4,362 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <style>
+                /*GOOGLE FONTS*/
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #f8ede3;
+        }
+        html{
+            font-size: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        .about-title{
+            font-size: 4rem;
+            font-weight: 300;
+            color: black;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            text-align: center;
+        }
+        .sc-container{
+            position: relative;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container{
+            min-height: 85vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .s-container{
+            min-height: 75vh;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Hero Section*/
+        #hero{
+        position: relative;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        #hero .title{
+            position: relative;
+            width: 30%;
+            margin-left: 20%;
+            margin-top: 15%;
+            float: left;
+            border: 1px black;
+        }
+        #hero .title p{
+            font-size: 1.4rem;
+            margin-top: 10px;
+            line-height: 1.9rem;
+            font-weight: 300;
+            letter-spacing: .05rem;
+        }
+        #hero .img{
+        position: relative;
+        width: 30%;
+        margin-right: 15%;
+        margin-top: 10%; 
+        float: right;
+        }
+        #hero .img .photo{
+            border:6px solid #a2b29f; 
+            -webkit-border-radius:15px; 
+            -moz-border-radius:15px; 
+            border-radius:200px;
+        }
+        #hero h1{
+            display: block;
+            width: fit-content;
+            font-size: 4rem;
+            position: relative;
+        }
+        #hero .mouse-img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 6%;
+        }
+        #hero .cv{
+            display: inline-block;
+            padding: 10px 30px;
+            color: #bdd2b6;
+            background-color: transparent;
+            border: 2px solid #bdd2b6;
+            border-radius: 6px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            margin-top: 30px;
+            transition: .3s ease;
+            transition-property: background-color color;
+        }
+        #hero .cv:hover{
+            color:  white;
+            background-color: #bdd2b6;
+        }
+        /* End Hero Section*/
+
+        /* Experience Section*/
+        #experience .experience{
+            flex-direction: column;
+            text-align: center;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+
+        #experience .experience-title{
+            font-size: 4rem;
+            margin-top: 50px;
+            font-weight: 300;
+            color: black;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            text-align: center;
+        }
+        #experience .experience-top p{
+            font-size: 1.4rem;
+            margin-top: 5px;
+            line-height: 1.5rem;
+            font-weight: 300;
+            letter-spacing: .05rem;
+        }
+        #experience .experience-bottom{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #experience .experience-item{
+            flex-basis: 80%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 30px;
+            border:2px solid #a2b29f;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            margin: 10px 5%;
+        }
+        #experience .experience-item p{
+            text-align: left;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+        }
+        /* End Experience Section*/
+
+        /* Scholl Section*/
+        #school .school-item{
+            flex-basis: 80%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 30px;
+            border:2px solid #a2b29f;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            margin: 10px 5%;
+        }
+        /* End Scholl Section*/
+
+        /* Skills Section */
+        .skills-area h1{
+            text-align: center;
+            margin-top: 40px;
+            font-size: 4rem;
+            margin-bottom: 40px;
+        }
+
+        .skills-area{
+            display: flex;
+            flex-direction: column;
+            padding: 0 20%;
+        }
+        .skill{
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .skill-title{
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .skill-bar{
+            width: 100%;
+            background: rgba(255,255,255,0.6);
+            height: 40px;
+            border-radius: 100px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+        }
+
+        .skill-fill{
+            background: #adc2a9;
+            height: 40px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 30px;
+            overflow: hidden;
+        }
+
+        .skill-percent{
+            font-size: 30px;
+            background-color: transparent;
+        }
+
+        .html{
+            animation: html 2s;
+            width: 80%;
+        }
+
+        .css{
+            animation: css 2s;
+            width: 70%;
+        }
+
+        .java{
+            animation: java 2s;
+            width: 50%;
+        }
+
+        .sql{
+            animation: sql 2s;
+            width: 85%;
+        }
+
+        .excel{
+            animation: excel 2s;
+            width: 75%;
+        }
+
+        .c{
+            animation: c 2s;
+            width: 50%;
+        }
+        /* End Skills Section */
+
+
+        @keyframes html {
+            from{
+                width: 0;
+            }
+            to {
+                width: 80%;
+            }
+        }
+
+        @keyframes css {
+            from{
+                width: 0;
+            }
+            to {
+                width: 70%;
+            }
+        }
+
+        @keyframes java {
+            from{
+                width: 0;
+            }
+            to {
+                width: 50%;
+            }
+        }
+
+        @keyframes sql {
+            from{
+                width: 0;
+            }
+            to {
+                width: 85%;
+            }
+        }
+
+        @keyframes excel {
+            from{
+                width: 0;
+            }
+            to {
+                width: 75%;
+            }
+        }
+
+        @keyframes c {
+            from{
+                width: 0;
+            }
+            to {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (max-width: 750px){
+            .skills-area{
+                padding: 0 5%;
+            }
+            .s-container{
+                display: flex;
+                flex-direction: column;
+            }
+            #hero .title{
+                position: relative;
+                width: 30%;
+                margin-left: 5%;
+                margin-top: 10%;
+                float: left;
+            }
+            #hero .img{
+            position: relative;
+            width: 30%;
+            margin-right: 15%;
+            margin-top: 10%; 
+            float: right;
+            }
+            
+        }
+            </style>
     <title>Nursah Yildiz</title>
 </head>
 <body>
     <!-- Hero Section-->
     <section id="hero">
-        <div class="title container">
-            <div>
-                <h1>Hello, My name is <span>Nurşah</span></h1>
-                <a href="#" type="button" class="cv">DOWNLOAD CV</a>
-            </div>
+        <div class="s-container">
             <div class="img">
-                <img src="https://picsum.photos/200/300" class="photo" width="350px" height="350px" alt="">
+                <img src="img/nrs_photo.jpeg" class="photo" width="350px" height="350px" alt="">
             </div>            
+            <div class="title">
+                <h1>Hello, My name is <span>Nurşah</span></h1>
+                <p>Güzelbahçe Mah. 9.Bölge 72.Sokak Bahçeşehir/Düzce
+                    <br> 0544 487 1212
+                    <br> ynursahh@gmail.com
+                </p>
+                <a href="/pdf/Nursahyildizz.pdf" type="button" target="_blang" class="cv">DOWNLOAD CV</a>
+            </div>
         </div>
         <img src="https://img.icons8.com/dotty/80/null/mouse-scrolling.png" class="mouse-img"/>
     </section>
@@ -28,40 +370,25 @@
         <div class="experience container">
             <div class="experience-top">
                 <h1 class="about-title">Abaout Me</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi omnis temporibus 
-                maxime praesentium, dolor sit dicta. Id ipsum accusamus molestias dicta, consequatur 
-                temporibus consequuntur fugit natus itaque ut amet adipisci.</p>
+                <p> Hi, I am Nurşah, <br> I want to improve myself in the departments of management, I take courses related to 
+                    data analytics or business analytics, <br> and I also want to improve myself in areas such 
+                    as project management and work in these departments. <br> I take the necessary courses and 
+                    courses for these.</p>
             </div>
             <div class="experience-bottom">
                 <h1 class="experience-title">Experience</h1>
                 <div class="experience-item">
-                    <h2>Calıstıgın Yer</h2>
-                    <p>Neler yaptıgın
-                        <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore odio dicta vitae 
+                    <h2>Hilton Hotel</h2>
+                    <p>Part-Time Waitress | 2020-2021
+                        <br> <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore odio dicta vitae 
                         officia voluptatum, repudiandae quisquam, corrupti suscipit quasi exercitationem iusto 
                         atque possimus rem a ullam. Magnam debitis perspiciatis expedita.
                     </p>
                 </div>
                 <div class="experience-item">
-                    <h2>Calıstıgın Yer</h2>
-                    <p>Neler yaptıgın
-                        <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore odio dicta vitae 
-                        officia voluptatum, repudiandae quisquam, corrupti suscipit quasi exercitationem iusto 
-                        atque possimus rem a ullam. Magnam debitis perspiciatis expedita.
-                    </p>
-                </div>
-                <div class="experience-item">
-                    <h2>Calıstıgın Yer</h2>
-                    <p>Neler yaptıgın
-                        <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore odio dicta vitae 
-                        officia voluptatum, repudiandae quisquam, corrupti suscipit quasi exercitationem iusto 
-                        atque possimus rem a ullam. Magnam debitis perspiciatis expedita.
-                    </p>
-                </div>
-                <div class="experience-item">
-                    <h2>Calıstıgın Yer</h2>
-                    <p>Neler yaptıgın
-                        <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore odio dicta vitae 
+                    <h2>Funivarium</h2>
+                    <p>Prat-Time Children Gamer Sister | 2020- 2021
+                        <br> <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore odio dicta vitae 
                         officia voluptatum, repudiandae quisquam, corrupti suscipit quasi exercitationem iusto 
                         atque possimus rem a ullam. Magnam debitis perspiciatis expedita.
                     </p>
@@ -73,35 +400,27 @@
 
     <!-- School Section-->
     <section id="school">
-        <div class="school s-container">
+        <div class="school sc-container">
             <div class="school-header">
                 <h1 class="about-title">SCHOOL</h1>
             </div>
             <div class="all-header">
                 <div class="school-item">
                     <div class="school-info">
-                        <h1>Okul adı</h1>
+                        <h1>Yıldırım Beyazıt Univercity</h1>
                         <ul>
-                            <li>start: 2012</li>
-                            <li>end: 2018</li>
+                            <li><b>Ankara</b></li>
+                            <li>start: 2018</li>
+                            <li>end: 2024</li>
                             <li>Gradued point: 84%</li>
                         </ul>
                     </div>
                 </div>
                 <div class="school-item">
                     <div class="school-info">
-                        <h1>Okul adı</h1>
+                        <h1>Arsal Anadolu High School</h1>
                         <ul>
-                            <li>start: 2012</li>
-                            <li>end: 2018</li>
-                            <li>Gradued point: 84%</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="school-item">
-                    <div class="school-info">
-                        <h1>Okul adı</h1>
-                        <ul>
+                            <li><b>Düzce</b></li>
                             <li>start: 2012</li>
                             <li>end: 2018</li>
                             <li>Gradued point: 84%</li>
@@ -120,7 +439,7 @@
             <div class="skill-title">HTML</div>
             <div class="skill-bar"></div>
             <div class="html skill-fill">
-                <span class="skill-percent">50%</span>
+                <span class="skill-percent">80%</span>
             </div>
         </div>
         <div class="skill">
@@ -134,19 +453,31 @@
             <div class="skill-title">JAVA</div>
             <div class="skill-bar"></div>
             <div class="java skill-fill">
-                <span class="skill-percent">80%</span>
+                <span class="skill-percent">50%</span>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-title">SQL</div>
+            <div class="skill-bar"></div>
+            <div class="sql skill-fill">
+                <span class="skill-percent">85%</span>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-title">EXCEL</div>
+            <div class="skill-bar"></div>
+            <div class="excel skill-fill">
+                <span class="skill-percent">75%</span>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-title">C</div>
+            <div class="skill-bar"></div>
+            <div class="c skill-fill">
+                <span class="skill-percent">50%</span>
             </div>
         </div>
     </section>
     <!-- End Skills Section-->
-    <!-- Footer Section-->
-    <section class="footer-area">
-        <div class="footer">
-
-        </div>
-    </section>
-    <!-- End Footer Section-->
-
-
 </body>
 </html>

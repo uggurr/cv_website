@@ -23,6 +23,12 @@ a{
     letter-spacing: .2rem;
     text-align: center;
 }
+.sc-container{
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .container{
     min-height: 85vh;
     width: 100%;
@@ -38,21 +44,32 @@ a{
 }
 /* Hero Section*/
 #hero{
-    background-size: cover;
-    background-position: top center;
-    position: relative;
+   position: relative;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
 }
 #hero .title{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 50px;
-    justify-content: flex-start;
+    position: relative;
+    width: 30%;
+    margin-left: 20%;
+    margin-top: 15%;
+    float: left;
+    border: 1px black;
+}
+#hero .title p{
+    font-size: 1.4rem;
+    margin-top: 10px;
+    line-height: 1.9rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
 }
 #hero .img{
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 0 50px;
-    justify-content: flex-start;
+   position: relative;
+   width: 30%;
+   margin-right: 15%;
+   margin-top: 10%; 
+   float: right;
 }
 #hero .img .photo{
     border:6px solid #a2b29f; 
@@ -70,6 +87,7 @@ a{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 6%;
 }
 #hero .cv{
     display: inline-block;
@@ -192,7 +210,7 @@ a{
 }
 
 .skill-fill{
-    background: blue;
+    background: #adc2a9;
     height: 40px;
     border-radius: 100px;
     display: flex;
@@ -209,7 +227,7 @@ a{
 
 .html{
     animation: html 2s;
-    width: 50%;
+    width: 80%;
 }
 
 .css{
@@ -219,15 +237,32 @@ a{
 
 .java{
     animation: java 2s;
-    width: 80%;
+    width: 50%;
 }
+
+.sql{
+    animation: sql 2s;
+    width: 85%;
+}
+
+.excel{
+    animation: excel 2s;
+    width: 75%;
+}
+
+.c{
+    animation: c 2s;
+    width: 50%;
+}
+/* End Skills Section */
+
 
 @keyframes html {
     from{
         width: 0;
     }
     to {
-        width: 50%;
+        width: 80%;
     }
 }
 
@@ -245,7 +280,34 @@ a{
         width: 0;
     }
     to {
-        width: 80%;
+        width: 50%;
+    }
+}
+
+@keyframes sql {
+    from{
+        width: 0;
+    }
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes excel {
+    from{
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes c {
+    from{
+        width: 0;
+    }
+    to {
+        width: 50%;
     }
 }
 
@@ -253,15 +315,27 @@ a{
     .skills-area{
         padding: 0 5%;
     }
-    #hero .img{
+    .s-container{
         display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
+        flex-direction: column;
     }
+    #hero .title{
+        position: relative;
+        width: 30%;
+        margin-left: 5%;
+        margin-top: 10%;
+        float: left;
+    }
+    #hero .img{
+       position: relative;
+       width: 30%;
+       margin-right: 15%;
+       margin-top: 10%; 
+       float: right;
+    }
+    
 }
-/* End Skills Section */
+
 
 
 
